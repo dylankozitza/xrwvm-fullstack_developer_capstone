@@ -9,10 +9,11 @@ from . import views
 app_name = 'djangoapp'
 urlpatterns = [
     # # path for registration
-    path('registration/', views.registration_request, name='registration'),
+    path(route='register', views=views.registration_request, name='register'),
     # path for login
     path(route='login', view=views.login_user, name='login'),
-    path('logout/', views.logout_request, name='logout'),
+    # path for logout
+    path(route='logout/', views=views.logout_request, name='logout'),
     # path for dealer reviews view
 
     # path for add a review view
